@@ -1,4 +1,8 @@
 <?php
+/*
+ *nazwa bazy danych: listatodo
+ * wywolanie: php artisan migrate
+ * */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
