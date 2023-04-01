@@ -8,21 +8,6 @@
         <meta name="author" content="Bartosz Muzolf">
         <title>ToDo</title>
         @vite(['resources/js/app.js'])
-        <?php
-        class generator
-        {
-            $query = DB::select('select * from zadania');
-
-            function generate_list()
-            {
-                $rows = DB::table('zadania')->count();
-                if($rows>0)
-                {
-                    echo "xd";
-                }
-            }
-        }
-        ?>
         <style>
             body
             {
@@ -78,6 +63,12 @@
             {
                 box-shadow: 0 0 0 0.25rem #7952b344;
             }
+            .listItem
+            {
+                border: 2px solid #0d6efd;
+                border-radius: 25px;
+                height:150px;
+            }
         </style>
 
     </head>
@@ -106,7 +97,14 @@
         </header>
         <section class="p-4 my-container">
             <button type="button" id="menu-btn" class="btn my-4 bg-primary text-light">MENU</button>
-            
+            <h1>Zadania:</h1>
+            @foreach($data as $got)
+                <div class="listItem m-auto p-2 mt-3">
+                    <div class="h2">
+                        {{$data}}
+                    </div>
+                </div>
+            @endforeach
         </section>
     <script>
         let menu_btn = document.querySelector("#menu-btn");
