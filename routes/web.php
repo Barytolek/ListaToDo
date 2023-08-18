@@ -26,5 +26,8 @@ Route::get('/dodawanie', function () {
 Route::get('/usuwanie',[listMain::class, 'getData'])->name('usun');
 Route::post('/usunieto',[listMain::class, 'deleteObject']);
 Route::post('/dodano',[listMain::class, 'addObject']);
+Route::get('/formError', function () {
+    return view('index');
+})->name('formError');
 
 
