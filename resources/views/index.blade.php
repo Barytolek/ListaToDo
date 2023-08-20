@@ -9,13 +9,14 @@
         <title>ToDo</title>
         @vite(['resources/js/app.js'])
         <link rel="stylesheet" type="text/css" href="css/style.css">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     </head>
     <body>
     <header>
         <nav class="navbar navbar-dark bg-primary navbar-expand-lg  d-flex flex-column align-items-start" id="sidebar">
             <a href="#" class="navbar-brand text-light mt-5">
-                <div class="display-5"><img src="{{URL::asset('images/logo.png')}}" alt="logo.png" height="64px" width="64px" class="mb-2">ToDo</div>
+                <div class="display-5"><i class="bi bi-list-check"></i>ToDo</div>
                 <ul class="navbar-nav d-flex flex-column mt-5 w-100">
                     <li class="nav-item w-100">
                         <a href="/" class="nav-link text-light pl-4">Start</a>
@@ -43,3 +44,4 @@
     <script src="js/scripts.js"></script>
     </body>
 </html>
+
