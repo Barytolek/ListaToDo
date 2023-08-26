@@ -29,5 +29,5 @@ Route::post('/dodano',[listMain::class, 'addObject']);
 Route::get('/formError', function () {
     return view('index');
 })->name('formError');
-
+Route::post('/zmieniono',[listMain::class, 'changeState']);
 

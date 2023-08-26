@@ -5,11 +5,14 @@
         <span>Wyszukaj: </span>
         <input type="text" id="wyszukiwarka">
     </div>
-
     @foreach($data as $got)
+
         <div class="listItem m-auto p-2 mt-3 fs-4 position-relative" id="{{$got->nazwa_zadania}}">
-            <div class="h2 p-2">
+            <div><input type="hidden" class="stan" value="{{$got->czy_zakonczone}}"></div>
+            <div class="h2 p-2 d-inline-block">
                 {{$got->nazwa_zadania}}
+            </div>
+            <div class="d-inline-block float-end">
             </div>
             <div class="p-2 justify-content-evenly">
                 {{$got->opis_zadania}}

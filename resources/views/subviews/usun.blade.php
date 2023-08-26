@@ -1,4 +1,10 @@
 <section class="p-4 my-container">
+    <form id="sendId" action="{{url('/usunieto')}}" method="post">
+        @csrf
+    </form>
+    <form id="changeState" action="{{url('/zmieniono')}}" method="post">
+        @csrf
+    </form>
     <button type="button" id="menu-btn" class="btn my-4 bg-primary text-light">MENU</button>
     <h1>Zadania:</h1>
     @foreach($data as $got)
@@ -7,10 +13,9 @@
                 {{$got->nazwa_zadania}}
             </div>
             <div class="d-inline-block float-end">
-                <form id="sendId" action="{{url('/usunieto')}}" method="post">
-                    @csrf
-                </form>
-                <button type="submit" form="sendId" class="btn-close bg-danger" name="deleteButton" value="{{$got->id_zadania}}"></button>
+                <button type="submit" form="sendId" class="btn-danger bg-danger" name="deleteButton" value="{{$got->id_zadania}}">Usuń</button>
+                <button type="submit" class="btn-success bg-success" name="stan" value="{{$got->id_zadania}}" form="changeState">Zmień stan</button>
+                <input type="hidden" class="stan" value="{{$got->czy_zakonczone}}">
             </div>
             <div class="p-2 justify-content-evenly">
                 {{$got->opis_zadania}}
@@ -22,5 +27,6 @@
                 <span>Dodano: </span>{{$got->data_dodania}}
             </div>
         </div>
+        <script src="{{ asset('/js/borderColorChange.js') }}"></script>
     @endforeach
 </section>
