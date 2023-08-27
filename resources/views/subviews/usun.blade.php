@@ -14,7 +14,7 @@
             </div>
             <div class="d-inline-block float-end">
                 <button type="submit" form="sendId" class="btn-danger bg-danger" name="deleteButton" value="{{$got->id_zadania}}">Usuń</button>
-                <button type="submit" class="btn-success bg-success" name="stan" value="{{$got->id_zadania}}" form="changeState">Zmień stan</button>
+                <button type="submit" class="btn-success bg-success" name="stan" value="{{$got->id_zadania}}" form="changeState">Gotowe/Niegotowe</button>
                 <input type="hidden" class="stan" value="{{$got->czy_zakonczone}}">
             </div>
             <div class="p-2 justify-content-evenly">
