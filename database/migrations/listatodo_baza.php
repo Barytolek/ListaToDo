@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('zadania', function (Blueprint $table) {
             $table->id("id_zadania");
+            $table->string("nazwa_zadania");
             $table->string("opis_zadania");
             $table->date("data_dodania");
             $table->date("data_zakonczenia");
