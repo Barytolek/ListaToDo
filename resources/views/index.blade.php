@@ -14,7 +14,7 @@
     </head>
     <body>
     <header>
-        <nav class="navbar navbar-dark bg-primary navbar-expand-lg  d-flex flex-column align-items-start" id="sidebar">
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg  position-fixed align-items-start" id="sidebar">
             <a href="#" class="navbar-brand text-light mt-5">
                 <div class="display-5"><i class="bi bi-list-check"></i>ToDo</div>
                 <ul class="navbar-nav d-flex flex-column mt-5 w-100">
